@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* This is not needed for centering */
+    background-color: #094a50;
+  }
+
+  #img-box {
+    /* Adjust the size as needed */
+    height: 400px;
+    width: 300px;
+    position: relative;
+  }
+
+  #img-box img {
+    max-width: 100%; /* Use max-width for responsiveness */
+    max-height: 100%; /* Use max-height for responsiveness */
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: top;
+  }
+
+  #img-box i {
+    font-size: 30px;
+    color: red; /* Change to the desired color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.5;
+    transition: all ease-out 0.2s;
+    transform: translate(-50%, -50%) scale(0); /* Change the scale value to 1 to make it visible */
+  }
