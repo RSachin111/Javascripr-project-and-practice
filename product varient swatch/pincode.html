@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pincode check</title>
+</head>
+<body>
+<div class="pincode-box">
+    <p id="pincode_list">12345,1234,123,12356</p>
+    <p id="pincode_label">Enter your pincode </p>
+    <input id="pincode" type="text" name="pincode" placeholder="pincode">
+    <button id="pincode-button">check</button>
+</div>
+
+<script>
+    let btn = document.querySelector("#pincode-button");
+    let pincode = document-querySelector("#pincode");
+    let pincodeListElement = document.querySelector("#pincode_list");
+  
+
+    btn.addEventListener("click", function () {
+        // Get the list of pin codes and split it into an array
+        let pincodeList = pincodeListElement.textContent.split(',');
+
+        if (pincodeList.includes(pincode.value.trim())) {
+    // Update the content and style of the "green" element
+    green.textContent = "Your pincode is available for delivery";
+    green.style.color = "green"; // Set the text color to green
+
+    // Clear the content and style of the "red" element
+    red.textContent = "";
+    red.style.color = ""; // Clear any previous text color
+} else {
+    // Update the content and style of the "red" element
+    red.textContent = "Your pin code is not available for delivery.";
+    red.style.color = "red"; // Set the text color to red
+
+    // Clear the content and style of the "green" element
+    green.textContent = "";
+    green.style.color = ""; // Clear any previous text color
+}
+
+    });
+</script>
+</body>
+</html>
